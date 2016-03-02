@@ -1,0 +1,19 @@
+<ion-view view-title="Create Homestay">
+    <ion-content>
+        <form class="list" name="create.form" ng-submit="create.submit()" novalidate>     
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Homestay Title</span>
+                <input type="text" ng-model="create.title" name="title" placeholder="Homestay Title" required>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Homestay Description</span>
+                <input type="text" name="description" ng-model="create.description" placeholder="Homestay Description">
+            </label>
+            <div class="padding">
+                <button type="submit" class="button button-balanced button-block">Create Now</button>
+            </div>
+        </form>
+        <ion-spinner icon="spiral" ng-if="create.loading"></ion-spinner>
+    </ion-content>
+</ion-view>

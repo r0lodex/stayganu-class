@@ -1,0 +1,22 @@
+<style type="text/css">
+    #map-canvas .angular-google-map-container {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+
+<ion-view view-title="Homestay Detail">
+    <ion-content class="padding">
+        <h2>{{ hs.homestay.name }}</h2>
+        <p>{{ hs.homestay.descriptions }}</p>
+        <img ng-src="http://stayganu.hiro.my/uploads/{{ hs.homestay.images[0].filename }}" width="100%">
+        <div id="map-canvas">
+            <ui-gmap-google-map
+                center="hs.map.center"
+                zoom="hs.map.zoom">
+                <ui-gmap-marker coords="hs.marker.coords" idkey="hs.marker.id"></ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </ion-content>
+</ion-view>

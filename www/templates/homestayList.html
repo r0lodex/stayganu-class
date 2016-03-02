@@ -1,0 +1,13 @@
+<ion-view view-title="Homestay">
+    <ion-content class="padding">
+        <ul>
+            <li ng-repeat="hs in homestay.homestays">
+                <a ui-sref="homestay.detail({ homestay_id: hs.id })">
+                    <img ng-src="http://stayganu.hiro.my/uploads/{{ hs.images[0].filename }}" width="100%">
+                    <strong>{{ hs.name }}</strong>
+                </a>
+                <hr>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
